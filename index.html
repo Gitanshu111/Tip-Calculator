@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Tip Calculator</title>
+    <style>
+        .a{
+            text-align: center;
+            color: black;
+            
+        }
+        .b{
+            border: 1px solid black;
+            border-radius: 13px;
+            background-color: aqua;
+        }
+        .c,.f{
+            padding: 10px;
+            margin: 20px;
+            text-align: center;
+        }
+        #d{
+           
+            height: 30px;
+            width: auto;  
+        }
+
+        #d:hover{
+            background-color: aqua;
+        }
+        .e{
+            text-align: center;
+            
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+        .g{
+            display: flex;
+            justify-content: center;
+            height: 30px;
+            width: auto;  
+        }
+
+    </style>
+</head>
+<body>
+    <div class="b">
+    <h1 class="a" >!!!!!! **Tip Dedo plzz👏👏** !!!!!!</h1>
+</div>
+
+<div style=" text-align: center;">
+    <label >Enter Total Bill amount</label><br>
+<input class="c" type="text" placeholder="Enter your Bill Amount" value=""><br>
+</div>
+<div style="text-align: center;">
+    <label> Enter Donate amonut Percent</label><br>
+    <input class="f" type="text" placeholder="Enter percent amount" value=""><br>
+    
+</div>
+<div style="text-align: center;">
+<button id="d">Calculate Tip</button></div>
+<div>
+<p class="e"> <b></b></p><br>
+</div>
+<div class="g">
+    <button id="h" onclick="gta()">Reset</button>
+</div>
+
+</body>
+
+<script>
+let inpt = document.querySelector(".c");
+let btn = document.querySelector("#d");
+let ans = document.querySelector(".e");
+let inpt1 = document.querySelector(".f")
+btn.addEventListener("click",calculate)
+function gta(){
+    ans.innerText=""
+    inpt.value=""
+    inpt1.value=""
+}
+function calculate()
+{
+    let amnt = inpt.value;
+    let amnt2 = inpt1.value
+    let tip = amnt*amnt2/100;
+    ans.innerText = "Your Tip is " + tip;
+}
+</script>
+</html>
